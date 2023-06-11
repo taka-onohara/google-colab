@@ -21,7 +21,6 @@ y2 = JPNrealGDP.Data(:,2);
 ysd1 = std(cycle1)*100;
 ysd2 = std(cycle2)*100;
 
-
 disp(['GERsd: ', num2str(ysd1),'.']); disp(' ')
 disp(['JPNsd: ', num2str(ysd2),'.']); disp(' ')
 corrcoef = corrcoef(cycle1,cycle2)
@@ -40,6 +39,7 @@ legend GER JPN
 
 hold off
 
+% define function
 function [ytilde,tauGDP] = qmacro_hpfilter(y, lam)
 
 T = size(y,1);
